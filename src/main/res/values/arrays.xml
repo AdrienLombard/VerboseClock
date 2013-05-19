@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="langages">
+        <item>Français</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="langagesValues">
+        <item>fr</item>
+        <item>en</item>
+    </string-array>
+
+    <string-array name="formatHeure">
+        <item>24h</item>
+        <item>AM / PM</item>
+    </string-array>
+
+</resources>

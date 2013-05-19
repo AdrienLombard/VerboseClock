@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="fr.desconspareils.clock"
+    android:versionCode="4"
+    android:versionName="1.0.3" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="fr.desconspareils.clock.ClockActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:logo="@drawable/ic_launcher" android:name="VerboseClockWidget" android:label="VerboseClock widget">
+        	<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+        	<meta-data android:name="android.appwidget.provider" android:resource="@xml/verboseclock_meta" />
+        </receiver>
+        <activity android:name="WidgetConfigure">
+            <intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+        </activity>
+        <activity android:name="Config">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="fr.desconspareils.clock.ClockActivity" />
+        </activity>
+    </application>
+</manifest>

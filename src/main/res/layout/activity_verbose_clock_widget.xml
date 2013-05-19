@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clock_widget"
+    android:layout_width="fill_parent"
+    android:layout_height="72dp"
+    android:layout_margin="2dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:background="@color/transparent">
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hourTv" android:layout_gravity="top" android:textAlignment="center"
+            android:textSize="18sp" android:gravity="center|top"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/etTv"
+            android:paddingTop="2dp"
+            android:textSize="18sp"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/minTv" android:layout_gravity="bottom" android:textAlignment="center"
+            android:textSize="18sp" android:gravity="center|bottom" android:singleLine="false"/>
+</FrameLayout>

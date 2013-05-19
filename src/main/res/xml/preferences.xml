@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/pref_date_heure" >
+        <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="showDate"
+                android:title="@string/affiche_date"
+                android:summary="@string/affiche_date_resume" >
+        </CheckBoxPreference>
+        <ListPreference
+                android:defaultValue="24h"
+                android:key="formatHeure"
+                android:entries="@array/formatHeure"
+                android:title="@string/pref_format_heure"
+                android:entryValues="@array/formatHeure"
+                android:summary="@string/pref_format_heure_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_lang" >
+        <ListPreference
+                android:defaultValue="fr"
+                android:key="lang"
+                android:entries="@array/langages"
+                android:title="@string/pref_lang_title"
+                android:entryValues="@array/langagesValues"
+                android:summary="@string/pref_lang_summary" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

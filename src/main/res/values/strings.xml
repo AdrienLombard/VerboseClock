@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VerboseClock</string>
+    <string name="menu_settings">Settings</string>
+
+    <string-array name="days">
+        <item>dimanche</item>
+        <item>lundi</item>
+        <item>mardi</item>
+        <item>mercredi</item>
+        <item>jeudi</item>
+        <item>vendredi</item>
+        <item>samedi</item>
+    </string-array>
+
+    <string name="demi">et demi</string>
+    <string name="quart">et quart</string>
+    <string name="moinsQuart">moins le quart</string>
+    <string name="presque">presque</string>
+    <string name="bientot">bientôt</string>
+    <string name="passe">passé</string>
+    <string name="ilest">Il est</string>
+    <string name="title_activity_verbose_clock_widget">VerboseClockWidget</string>
+
+    <string name="heure">heure</string>
+    <string name="heures">heures</string>
+    <string name="minute">minute</string>
+    <string name="minutes">minutes</string>
+
+    <string name="et">et</string>
+
+    <string-array name="nombres">
+        <item>minuit</item>
+        <item>une</item>
+        <item>deux</item>
+        <item>trois</item>
+        <item>quatre</item>
+        <item>cinq</item>
+        <item>six</item>
+        <item>sept</item>
+        <item>huit</item>
+        <item>neuf</item>
+        <item>dix</item>
+        <item>onze</item>
+        <item>douze</item>
+        <item>treize</item>
+        <item>quatorze</item>
+        <item>quinze</item>
+        <item>seize</item>
+        <item>dix-sept</item>
+        <item>dix-huit</item>
+        <item>dix-neuf</item>
+        <item>vingt</item>
+        <item>trente</item>
+        <item>quarante</item>
+        <item>cinquante</item>
+        <item>et</item>
+        <item>un</item>
+        <item>-</item>
+    </string-array>
+
+    <string name="affiche_date">Afficher la date</string>
+    <string name="affiche_date_resume">Heure sur une seule ligne et date en dessous</string>
+    <string name="pref_lang_title">Langage</string>
+    <string name="pref_lang_summary">Langue de l\&apos;application \&amp; du widget</string>
+    <string name="pref_format_heure">Format de l\&apos;heure</string>
+    <string name="pref_format_heure_summary">Sélectionnez le format de l\&apos;heure de l\&apos;application \&amp; du widget</string>
+
+    <string name="pref_date_heure">Date &amp; Heure</string>
+    <string name="pref_lang">Langage</string>
+
+</resources>
