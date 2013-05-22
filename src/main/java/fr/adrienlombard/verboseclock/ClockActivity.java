@@ -1,4 +1,4 @@
-package fr.desconspareils.clock;
+package fr.adrienlombard.verboseclock;
 
 import java.util.Calendar;
 
@@ -10,6 +10,7 @@ import android.content.Context;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import fr.desconspareils.clock.R;
 
 public class ClockActivity extends Activity {
 
@@ -55,7 +56,7 @@ public class ClockActivity extends Activity {
 	}
 
     public String getTimeString() {
-        String hour = createHourString(nombres, heure, heures);
+        String hour = createHourString(nombres, heure, heures, et);
         String min = createMinuteString(nombres, minute, minutes, et);
 
         if(min.equals("")) {
@@ -75,7 +76,7 @@ public class ClockActivity extends Activity {
         String minutes = context.getString(R.string.minutes);
         String et = context.getString(R.string.et);
 
-        String hour = createHourString(nombres, heure, heures);
+        String hour = createHourString(nombres, heure, heures, et);
         String min = createMinuteString(nombres, minute, minutes, et);
 
         if(min.equals("")) {
@@ -87,15 +88,16 @@ public class ClockActivity extends Activity {
     }
 
     public String getHourString() {
-        return createHourString(nombres, heure, heures);
+        return createHourString(nombres, heure, heures, et);
     }
 
     public static String getHourString(Context context) {
         String[] nombres = context.getResources().getStringArray(R.array.nombres);
         String heure = context.getString(R.string.heure);
         String heures = context.getString(R.string.heures);
+        String et = context.getString(R.string.et);
 
-        return createHourString(nombres, heure, heures);
+        return createHourString(nombres, heure, heures, et);
     }
 
     public String getMinuteString() {
@@ -111,10 +113,18 @@ public class ClockActivity extends Activity {
         return createMinuteString(nombres, minute, minutes, et);
     }
 
-    public static String createHourString(String[] nombres, String heure, String heures) {
+    public static String createHourString(String[] nombres, String heure, String heures, String et) {
         int heureInt = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
 
-        return firstUpper(nombres[heureInt]) + " " + (heureInt > 1 ? heures : heure) + "\n";
+        if(heureInt < 21) {
+            return firstUpper(nombres[heureInt]) + " " + (heureInt > 1 ? heures : heure) + "\n";
+        }
+        else if(heureInt == 21) {
+            return firstUpper(nombres[20]) + " " + et + " " + nombres[1] + " " + heures + "\n";
+        }
+        else {
+            return firstUpper(nombres[20]) + "-" + nombres[heureInt - 20] + " " + heures + "\n";
+        }
     }
 
     public static String createMinuteString(String[] nombres, String minute, String minutes, String et) {

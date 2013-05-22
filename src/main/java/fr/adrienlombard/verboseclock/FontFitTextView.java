@@ -1,4 +1,4 @@
-package fr.desconspareils.clock;
+package fr.adrienlombard.verboseclock;
 
 import android.content.Context;
 import android.graphics.Paint;

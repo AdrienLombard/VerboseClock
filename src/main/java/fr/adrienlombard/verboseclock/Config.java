@@ -1,4 +1,4 @@
-package fr.desconspareils.clock;
+package fr.adrienlombard.verboseclock;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -11,6 +11,7 @@ import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Button;
+import fr.desconspareils.clock.R;
 
 import java.util.List;
 

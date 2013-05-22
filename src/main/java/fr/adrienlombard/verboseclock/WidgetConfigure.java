@@ -1,12 +1,17 @@
-package fr.desconspareils.clock;
+package fr.adrienlombard.verboseclock;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 public class WidgetConfigure extends Activity {
+
+    public static AlarmManager alarmManager;
+    public static PendingIntent pendingIntent;
  
     private int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
 
@@ -24,10 +29,9 @@ public class WidgetConfigure extends Activity {
         if (extras != null) {
             mAppWidgetId = extras.getInt(AppWidgetManager.EXTRA_APPWIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID);
         }
- 
+
         // If they gave us an intent without the widget id, just bail.
         if (mAppWidgetId == AppWidgetManager.INVALID_APPWIDGET_ID) {
-            //Log.e("Napply", "Configuration Activity: no appwidget id provided");
             finish();
         }
 
